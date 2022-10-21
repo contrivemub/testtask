@@ -10,7 +10,10 @@ const UserCard = ({ photo, name, email, position, phone }) => {
         </div>
         <p className='user-name'>{name}</p>
         <p className='user-postion'>{position}</p>
-        <p className='user-email'>{email}</p>
+        <div className='email-container'>
+          <div className='tooltip'>{email}</div>
+          <p className='user-email'>{email}</p>
+        </div>
         <p className='user-phone'>{phone}</p>
       </div>
     </article>
