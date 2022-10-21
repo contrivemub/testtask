@@ -15,11 +15,11 @@
 
 // Card component found in the Users section
 .card {
+    width: 68%;
     min-height: 254px;
     background: $white;
     border-radius: 10px;
     padding: 20px;
-    position: relative;
 
     .user {
         @include flexCC(column);
@@ -34,38 +34,12 @@
             }
         }
 
-        .email-container {
+        .user-email {
+            text-align: center;
+            word-wrap: break-word;
             width: 100%;
 
-            .tooltip {
-                position: absolute;
-                bottom: -20px;
-                left: 200px;
-                background: rgba(0, 0, 0, 0.87);
-                border-radius: 4px;
-                color: $white;
-                padding: 0.5rem 1rem;
-                z-index: 4;
-                display: none;
-            }
-
-            .user-email {
-                text-align: center;
-                width: 100%;
-                cursor: pointer;
-                word-wrap: break-word;
-
-            }
-
-            &:hover .tooltip {
-                display: block;
-            }
-
         }
-
-
-
-
 
 
         &-name {
@@ -148,6 +122,11 @@ input:-webkit-autofill:active {
 
 
 @include for-small-phones-only {
+    .card {
+        width: 55%;
+    }
+
+
     .btn {
         width: 80px;
     }
